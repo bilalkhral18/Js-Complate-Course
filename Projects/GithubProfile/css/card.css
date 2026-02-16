@@ -6,10 +6,14 @@
   box-sizing: border-box;
   background-color: white;
   border-radius: 10px;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.38, 0.63, 0.08, 0.92);
+  /* transition-delay: 1s; */
 }
-/* .card-container:hover{
-
-} */
+.card-container:hover {
+  transform: rotate(-5deg);
+}
 .header-portion {
   display: flex;
   justify-content: space-between;
@@ -63,4 +67,9 @@
 .count-container h6 {
   font-size: 0.8rem;
   font-weight: 600;
+}
+.Profile_btn a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 2px;
 }

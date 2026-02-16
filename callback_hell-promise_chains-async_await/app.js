@@ -1,3 +1,45 @@
+// async await in js
+
+// function api() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("weather data");
+//       resolve(200);
+//     }, 3000);
+//   });
+// }
+// async function getweatherdata(params) {
+//   await api();
+//   await api();
+// }
+function getdata(dataid, getnextdata) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("data", dataid);
+      resolve("success");
+      if (getnextdata) {
+        getnextdata();
+      }
+    }, 2000);
+  });
+}
+(async function () {
+  console.log("data1 loads...");
+  await getdata(1, () => console.log("data2 loads..."));
+  await getdata(2, () => console.log("data3 loads..."));
+  await getdata(3, () => console.log("data4 loads..."));
+  await getdata(4);
+})();
+
+// getdata(1).then((res) => {
+//   console.log("data2 loads...");
+//   getdata(2).then((res) => {
+//     console.log("data3 loads...");
+//     getdata(3).then((res) => {
+//       console.log("finally sucessfully retreval of data");
+//     });
+//   });
+// });
 // Promises in js
 // function getdata(dataid, getnextdata) {
 //   return new Promise((resolve, reject) => {
@@ -34,27 +76,27 @@
 
 // // calculator(2, 3, sumsub, "sub");
 // // calculator(2, 3, sumsub, "sum");
-function getdata(dataid, getnextdata) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("data", dataid);
-      resolve("success");
-      if (getnextdata) {
-        getnextdata();
-      }
-    }, 2000);
-  });
-}
-console.log("data1 loads...");
-getdata(1).then((res) => {
-  console.log("data2 loads...");
-  getdata(2).then((res) => {
-    console.log("data3 loads...");
-    getdata(3).then((res) => {
-      console.log("finally sucessfully retreval of data");
-    });
-  });
-});
+// function getdata(dataid, getnextdata) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("data", dataid);
+//       resolve("success");
+//       if (getnextdata) {
+//         getnextdata();
+//       }
+//     }, 2000);
+//   });
+// }
+// console.log("data1 loads...");
+// getdata(1).then((res) => {
+//   console.log("data2 loads...");
+//   getdata(2).then((res) => {
+//     console.log("data3 loads...");
+//     getdata(3).then((res) => {
+//       console.log("finally sucessfully retreval of data");
+//     });
+//   });
+// });
 // console.log("data1 loads...");
 // getdata(1)
 //   .then((res) => {
