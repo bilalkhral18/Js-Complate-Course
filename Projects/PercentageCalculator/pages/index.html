@@ -8,33 +8,59 @@
   </head>
   <body>
     <div class="percantage-calculator">
-      <div class="calculator-container">
-        <form action="#">
-          <input type="number" name="Urdu" id="subject-1" placeholder="Urdu" />
-          <input
-            type="number"
-            name="English"
-            id="subject-2"
-            placeholder="English"
-          />
-          <input
-            type="number"
-            name="Physics"
-            id="subject-3"
-            placeholder="Physics"
-          />
-          <input
-            type="number"
-            name="Chemistry"
-            id="subject-4"
-            placeholder="Chemistry"
-          />
-          <button>Calculate</button>
-        </form>
-      </div>
-      <div .heading-container>
-        <h1>Calculate Your <span>Percentage</span></h1>
+      <div class="app-container">
+        <div class="box-calculation">
+          <form
+            class="form-container"
+            id="form-container"
+            onsubmit="percentageCalculator(event)"
+          >
+            <div id="input-box-container">
+              <input
+                type="number"
+                name="Urdu"
+                id="subject-1"
+                placeholder="Urdu"
+                min="0"
+                max="100"
+              />
+              <input
+                type="number"
+                name="English"
+                id="subject-2"
+                placeholder="English"
+                min="0"
+                max="100"
+              />
+              <input
+                type="number"
+                name="Physics"
+                id="subject-3"
+                placeholder="Physics"
+                min="0"
+                max="100"
+              />
+              <input
+                type="number"
+                name="Chemistry"
+                id="subject-4"
+                placeholder="Chemistry"
+                min="0"
+                max="100"
+              />
+            </div>
+            <button id="calbtn">Calculate</button>
+          </form>
+          <div class="result" id="result" style="visibility: hidden"></div>
+        </div>
+        <div class="heading-container">
+          <h1 class="heading">
+            <span class="h1-calculate">Calculate Your</span>
+            <span class="h1-percentage">Percentage</span>
+          </h1>
+        </div>
       </div>
     </div>
+    <script src="../js/index.js"></script>
   </body>
 </html>
