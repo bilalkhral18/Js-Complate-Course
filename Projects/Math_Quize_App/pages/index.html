@@ -14,17 +14,23 @@
       src="https://kit.fontawesome.com/17c7ca7c0b.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/index.js" defer></script>
   </head>
   <body>
     <div class="app-container">
       <main class="content">
         <div class="content-container">
           <div class="score">
-            <h2>Score <i class="fa-solid fa-arrow-right"></i><span>0</span></h2>
+            <h2>
+              Score <i class="fa-solid fa-arrow-right"></i
+              ><span id="count">0</span>
+            </h2>
             <div class="calculation">
-              <h1 class="Q-heading">Q. What is 6 multiply by 5</h1>
-              <form action="#">
-                <input type="number" />
+              <h1 class="Q-heading" id="random_question">
+                Q. What is 9 multiply by 6
+              </h1>
+              <form action="#" onsubmit="answerForm(event)" id="formValues">
+                <input type="number" id="userAnswer" name="userAnswer" />
                 <button type="submit">Submit</button>
               </form>
             </div>

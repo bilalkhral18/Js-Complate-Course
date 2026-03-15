@@ -16,7 +16,7 @@ body {
   height: 100%;
 }
 .app-container {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -68,4 +68,15 @@ form button {
   color: white;
   font-weight: 500;
   font-size: 1.1rem;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .content {
+    width: 65%;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    width: 80%;
+  }
 }
