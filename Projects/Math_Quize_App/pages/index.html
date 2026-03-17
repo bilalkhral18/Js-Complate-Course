@@ -30,13 +30,19 @@
                 Q. What is 9 multiply by 6
               </h1>
               <form action="#" onsubmit="answerForm(event)" id="formValues">
-                <input type="number" id="userAnswer" name="userAnswer" />
+                <input
+                  type="number"
+                  id="userAnswer"
+                  name="userAnswer"
+                  step="any"
+                />
                 <button type="submit">Submit</button>
               </form>
             </div>
           </div>
         </div>
       </main>
+      <div id="feedback" class="feedback"></div>
     </div>
   </body>
 </html>
